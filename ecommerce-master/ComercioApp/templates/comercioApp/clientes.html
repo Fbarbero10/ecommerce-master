@@ -2,14 +2,14 @@
 {% load static %}
 
 {% block tituloPagina%}
-Empleados
+Clientes
 {% endblock %}
 
 {%block contenidoPagina%}
 
 <!--Container tabla-catálago-->
 <section class="bg-light py-5">
-    <h2 class="display-7 fw-bolder text-black mb-2 text-center">Empleados</h2>
+    <h2 class="display-7 fw-bolder text-black mb-2 text-center">Clientes</h2>
     <div class="container px-5">
         <div class="row gx-5 justify-content-center">
 
@@ -24,17 +24,18 @@ Empleados
                   </tr>
                 </thead>
                 <tbody>
-                 {%for empleado in empleados%}
+                 {%for cliente in clientes%}
                   <tr>
-                    <td class="table-light">{{empleado.id}}</td>
-                    <td class="table-light">{{empleado.nombre}}</td>
-                    <td class="table-light">{{empleado.apellido}}</td>
-                    <td class="table-light">{{empleado.email}}</td>
+                    <td class="table-light">{{cliente.id}}</td>
+                    <td class="table-light">{{cliente.nombre}}</td>
+                    <td class="table-light">{{cliente.apellido}}</td>
+                    <td class="table-light">{{cliente.email}}</td>
                   </tr>
                   {%endfor%}
                 </tbody>
               </table>  
-              <button class=" mt-3 btn btn-secondary ms-7"><a href="{%url 'crear_empleados'%}">Crear empleado</a></button>
+              <button class=" mt-3 btn btn-secondary ms-7"><a href="{%url 'crear_cliente'%}">Crear cliente</a></button>
+          
         </div>
     </div>
 </section>

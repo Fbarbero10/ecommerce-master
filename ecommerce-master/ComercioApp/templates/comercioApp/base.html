@@ -19,13 +19,17 @@
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="{%url 'inicio'%}">Inicio</a></li>
                         <li class="nav-item"><a class="nav-link" href="{%url 'productos'%}">Productos</a></li>
                         <li class="nav-item"><a class="nav-link" href="{%url 'empleados'%}">Empleados</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#contact">Clientes</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{%url 'clientes'%}">Clientes</a></li>
                     </ul>
                 </div>
             </div>
         </nav>
+        <!--Aquí va el contenido dinámico de la página-->
+    
+        {% block contenidoPagina %} 
         <!-- Header-->
         <header class="bg-primary bg-gradient text-white">
             <div class="container px-4 text-center">
@@ -35,17 +39,9 @@
             </div>
         </header>
 
+        {% endblock%}
         <!--Aquí va el contenido dinámico de la página-->
-        {% block contenidoPagina %} 
-
-
-        
-
-        {%endblock%}
-
-
-
-        <!-- Footer-->
+|
         <footer class="py-5 bg-dark">
             <div class="container px-4"><p class="m-0 text-center text-white">Copyright &copy; Your Website 2022</p></div>
         </footer>
