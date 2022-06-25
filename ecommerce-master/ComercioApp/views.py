@@ -107,3 +107,12 @@ def crear_cliente(request):
 
         return render(request,"comercioApp/crear_cliente.html",{"form":formularioVacio})
 
+def busqueda_producto(request):
+    if request.method == "POST":
+
+        marca = request.POST["marca"]
+        productos = Producto.objects.filter(marca__icontains=marca)
+
+    else:
+         productos = [] 
+    return render(request,"comercioApp/busqueda_producto.html",{"productos":productos})

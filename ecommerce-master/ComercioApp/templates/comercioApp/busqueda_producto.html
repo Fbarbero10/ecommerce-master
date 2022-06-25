@@ -1,0 +1,43 @@
+{% extends './base.html'%}
+{% load static %}
+
+{% block tituloPagina%}
+Buscar Producto
+{% endblock %}
+
+
+{% block contenidoPagina %}
+
+<h2 class="text-center mt-3">Buscar producto:</h2>
+
+<form method="post" class="d-flex flex-column align-items-center mt-3">
+    {% csrf_token %} 
+
+    <input type="text" name="marca" placeholder="Marca:">
+    <input class="mt-2" type="submit"value="Buscar">
+</form>
+
+
+<!--Resultado Busqueda -->
+<table class="table table-dark mt-3">
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Marca</th>
+        <th scope="col">Modelo</th>
+        <th scope="col">Precio</th>
+      </tr>
+    </thead>
+    <tbody>
+     {%for producto in productos%}
+      <tr>
+        <td class="table-light">{{producto.id}}</td>
+        <td class="table-light">{{producto.marca}}</td>
+        <td class="table-light">{{producto.modelo}}</td>
+        <td class="table-light">${{producto.precio}}</td>
+      </tr>
+      {%endfor%}
+    </tbody>
+  </table>
+
+{% endblock%}
