@@ -14,7 +14,7 @@ class Empleados(models.Model):
         verbose_name_plural = 'Empleados'
 
 class Producto(models.Model):
-    marca = models.CharField(max_length=30)
+    marca  = models.CharField(max_length=30)
     modelo = models.CharField(max_length=30)
     precio = models.IntegerField()
     

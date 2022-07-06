@@ -80,7 +80,7 @@ def crear_empleado(request):
 
         return render(request,"comercioApp/crear_empleado.html",{"form":formularioVacio})
 
-    #PARA CREAR UN CLIENTE
+ #PARA CREAR UN CLIENTE
 def crear_cliente(request):
 
     if request.method == "POST":
@@ -106,7 +106,8 @@ def crear_cliente(request):
         formularioVacio = NuevoCliente()
 
         return render(request,"comercioApp/crear_cliente.html",{"form":formularioVacio})
-
+ 
+ #PARA BUSCAR UN CLIENTE
 def busqueda_producto(request):
     if request.method == "POST":
 
