@@ -1,32 +1,30 @@
-from operator import truediv
-from django.db import models
-from django.forms import CharField
 from tabnanny import verbose
-
-
+from django.db import models
 
 class Empleados(models.Model):
+
     nombre = models.CharField(max_length=30)
     apellido = models.CharField(max_length=30)
-    email = models.EmailField()
+    email = models.EmailField(blank=True, null=True) #opcional
+    
+    class Meta:
+        verbose_name_plural = "Empleados"
 
-    class Meta: 
-        verbose_name_plural = 'Empleados'
 
-class Producto(models.Model):
-    marca  = models.CharField(max_length=30)
+class Productos(models.Model):
+    marca = models.CharField(max_length=30)
+    imagen = models.CharField(max_length=400)
     modelo = models.CharField(max_length=30)
     precio = models.IntegerField()
     
-    class Meta: 
-        verbose_name_plural = 'Productos'
+    class Meta:
+        verbose_name_plural = "Productos"
+    
+class Clientes(models.Model):
 
-class Cliente(models.Model):
     nombre = models.CharField(max_length=30)
     apellido = models.CharField(max_length=30)
-    email = models.EmailField(blank=True, null=True)  #opcional
-
-    class Meta: 
-        verbose_name_plural = 'Clientes'
-
-# Create your models here.
+    email = models.EmailField(blank=True, null=True) #opcional
+    
+    class Meta:
+        verbose_name_plural = "Clientes"

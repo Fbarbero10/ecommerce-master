@@ -16,3 +16,4 @@ Se puede navegar a través de diferentes secciones como:
 * Lista de los empleados del local con sus datos personales Nombre - Apellido - Email. Permite agregar nuevos empleados y buscarlos a través de sus datos personales.
 
 * Lista de los clientes del local con sus datos personales Nombre - Apellido - Email. Permite agregar nuevos clientes despues de una compra y buscarlos a través de sus datos personales.
+

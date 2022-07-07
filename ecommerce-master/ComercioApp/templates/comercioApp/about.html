@@ -1,0 +1,64 @@
+{% extends './base.html'%} {% load static %}
+<!--titulo página-->
+{% block tituloPagina%} Sobre Nosotros {% endblock %}
+
+<!--Contenido-->
+{% block contenidoPagina %}
+
+<section class="container-fluid text-black text-center">
+  <h1><b>Sobre nosotros</b></h1>
+  <p class="mt-4">
+    Somos un grupo de estudiantes de Coderhouse iniciando nuestro camino en la
+    programación web, contamos con conocimientos en python y Django.
+  </p>
+</section>
+
+<section class="container-fluid text-center">
+  <div class="card-group">
+    <div class="card">
+      <img
+        src="https://media.glamour.mx/photos/6190765e2d97bd4c522a7c86/master/w_1600%2Cc_limit/220522.jpg"
+        class="card-img-top"
+        style="height: 250px"
+      />
+      <div class="card-body">
+        <h5 class="card-title">Rodriguez Franco</h5>
+        <p class="card-text">
+          This is a wider card with supporting text below as a natural lead-in
+          to additional content. This content is a little bit longer.
+        </p>
+      </div>
+    </div>
+    <div class="card">
+      <img
+        src="https://cdn.pixabay.com/photo/2017/08/21/16/03/henry-cavill-2665842_960_720.jpg"
+        class="card-img-top"
+        style="height: 250px"
+      />
+      <div class="card-body">
+        <h5 class="card-title">Trenado Franco</h5>
+        <p class="card-text">
+          This card has supporting text below as a natural lead-in to additional
+          content.
+        </p>
+      </div>
+    </div>
+    <div class="card">
+      <img
+        src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/ryan-reynolds-ansiedad-1646126801.jpg?crop=1.00xw:0.753xh;0,0.0342xh&resize=1200:*"
+        class="card-img-top"
+        style="height: 250px"
+      />
+      <div class="card-body">
+        <h5 class="card-title">Barbero Franco</h5>
+        <p class="card-text">
+          This is a wider card with supporting text below as a natural lead-in
+          to additional content. This card has even longer content than the
+          first to show that equal height action.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+{%endblock%}

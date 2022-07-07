@@ -1,0 +1,30 @@
+{% extends './base.html'%} {% load static %}
+<!--titulo-->
+{% block tituloPagina%} Buscar Producto {% endblock %}
+
+<!--COntenido-->
+{% block contenidoPagina%}
+<article class="container-lg text-center">
+  <div class="card mb-3 w-100" style="max-width: 840px">
+    <div class="row g-0">
+      <div class="col-md-4">
+        <img
+          src="{{producto.imagen}}"
+          class="img-fluid rounded-start"
+          alt="..."
+        />
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h1 class="card-title">{{producto.modelo}}</h1>
+          <p class="card-text">{{producto.marca}}</p>
+          <p class="card-text">
+            <b>Precio:</b> <span>${{producto.precio}}</span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
+
+{% endblock%}
